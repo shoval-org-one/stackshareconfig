@@ -1,0 +1,36 @@
+orgs:
+  - id: org-a
+
+  - id: org-b
+    parent_org_id: org-a
+
+  - id: org-c
+    parent_org_id: org-a
+
+  - id: org-d
+    parent_org_id: org-c
+
+apps:
+  - id: app-1
+    org_id: org-a
+    repo_urls:
+      - url-1
+      - url-2
+
+  - id: app-2
+    org_ids:
+      - org-b
+      - org-c
+    repo_urls:
+      - url-3
+
+  - id: app-3
+    org_id: org-b
+    repo_urls:
+      - url-1
+      - url-4
+
+ignored_repo_urls:
+  - url-5
+  - url-6
+  - url-7
